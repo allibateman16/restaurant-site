@@ -1,0 +1,39 @@
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr)); /* Keep adding new columns - even if theres is no content for them. content does not always take up full width */
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/ /* Don't add more columns than theres is content for. && +content "always" take full width */
+    grid-gap: 1rem;
+}
+
+.card{
+    border: 2px solid gray;
+    border-radius: 25px;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+    grid-gap: 1rem;
+}
+
+.card img{
+    align-self: center;
+    order: -1;
+}
+
+.card button{
+    align-self: center;
+}
+
+button {
+    background-color: teal;
+    box-shadow: 10px;
+    border-radius: 50px;
+    color: white;
+    width: 90%;
+    margin: .5rem;
+    border-radius: 1.2rem;
+    margin-top:auto;
+}
+
+
+
