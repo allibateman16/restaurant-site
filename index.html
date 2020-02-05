@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,51 +11,23 @@
 <body>
 
     <main>
-        <div class="container">
-            <header>Restaurant Site</header>
-
-            <h1>Starters</h1>
-            <div class="insideContainer">
-                <article class="card">
-                    <h2>NAME</h2>
-                    <img src="https://www.w3.org/TR/css-flexbox-1/images/computer.jpg" alt="You get: a white computer with matching peripherals">
-                    <p class="price">price</p>
-                    <p class="short">short description</p>
-
-                    <button>Read more</button>
-                </article>
-
-
-
-                <article class="card">
-                    <h2>NAME</h2>
-                    <img src="https://www.w3.org/TR/css-flexbox-1/images/computer.jpg" alt="You get: a white computer with matching peripherals">
-                    <p class="price">price</p>
-                    <p class="short">short description</p>
-
-                    <button>Read more</button>
-                </article>
-            </div>
-
-            <div class="insideContainer">
-                <h3>Mains</h3>
-
-
-                <article class="card">
-                    <h2>NAME</h2>
-                    <img src="https://www.w3.org/TR/css-flexbox-1/images/computer.jpg" alt="You get: a white computer with matching peripherals">
-                    <p class="price">price</p>
-                    <p class="short">short description</p>
-
-                    <button>Read more</button>
-                </article>
-
-            </div>
+        <template>
+            <article class="card">
+                <h1>NAME</h1>
+                <img src="https://www.w3.org/TR/css-flexbox-1/images/computer.jpg" alt="You get: a white computer with matching peripherals">
+                <p class="price">price</p>
+                <p class="short">short description</p>
+                <button id="Btn" class="readMore">Read more</button>
+                <div id="popUp" class="popUp">
+                    <div class="popUp-content">
+                        <span class="close">&times;</span>
+                        <p class="popUpText">Text</p>
+                    </div>
                 </div>
+            </article>
+        </template>
 
-                <script src="main.js"></script>
+        <script src="main.js"></script>
 
     </main>
-</body>
-
-</html>
+</body></html>
