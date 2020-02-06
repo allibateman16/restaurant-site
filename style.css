@@ -47,10 +47,11 @@ h3 {
 }
 
 .insideContainer{
-    justify-content: flex-start;
     display: flex;
+    flex: .5 .5;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .card {
@@ -63,6 +64,7 @@ h3 {
     padding: 2rem;
     grid-gap: 1rem;
     order 2;
+    margin: 5px;
 }
 
 .card img {
