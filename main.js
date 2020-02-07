@@ -9,13 +9,22 @@ fetch("https://kea-alt-del.dk/t5/api/productlist")
 function showData(jsonData){
     console.log(jsonData)
 
-const template = document.querySelector("template").content;
+
+    jsonData.forEach(showSingleDish)
+}
+
+function showSingleDish(dish){
+    console.log(dish)
+
+const template = document.querySelector("#dishTemplate").content;
 
 const aCopy = template.cloneNode(true);
 
-console.log(template)
+aCopy.querySelector("h2").textContent = dish.name;
+aCopy.querySelector("p.price span").textContent = dish.price;
+aCopy.querySelector("p.short").textContent = dish.shortdescription;
+aCopy.querySelector("img").src = "https://kea-alt-del.dk/t5/site/imgs/" + "small/" + dish.image + "-sm.jpg"
 
-aCopy.querySelector("h2").textContent = jsonData.name;
 
 
 
@@ -24,27 +33,4 @@ const showMe = document.querySelector("main");
 
 showMe.appendChild(aCopy);
 
-jsonData.forEach(showData);
-
 }
-
-/*var modal = document.getElementById("popUp");
-
-var btn = document.getElementById("Btn");
-
-var span = document.getElementsByClassName("close") [0];
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-span.onclick = function() {
-    modal.style.display = "none";
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}*/
-
-
