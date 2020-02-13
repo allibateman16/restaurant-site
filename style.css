@@ -1,10 +1,16 @@
-
 Html {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
+#container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
 body {
     background-color: floralwhite;
-    font-size: 100%vh;
+    font-size: 100%;
     font-family: "Roboto", sans-serif;
 
 }
@@ -20,8 +26,23 @@ header {
     font-weight: bold;
     border: solid 2px;
     border-color: crimson;
-   justify-content: center;
+    justify-content: center;
 
+}
+
+nav a {
+    grid-template-columns: 1fr;
+    text-decoration: none;
+    padding: 0.5rem;
+    background: var(--color-blue-light);
+    color: var(--color-grey-lightest);
+    border-bottom: 1px solid var(--color-grey-lightest);
+    transition: all 0.1s;
+}
+
+nav a:hover {
+    color: var(--color-blue-base);
+    border-bottom: 1px solid var(--color-blue-dark);
 }
 
 h1 {
@@ -45,27 +66,6 @@ h3 {
 
 }
 
-nav a {
-  display: block;
-  text-decoration: none;
-  padding: 0.5rem;
-  background: var(--color-blue-light);
-  color: var(--color-grey-lightest);
-  border-bottom: 1px solid var(--color-grey-lightest);
-  transition: all 0.1s;
-}
-
-nav a:hover {
-  background: var(--color-grey-lightest);
-  color: var(--color-blue-base);
-  border-bottom: 1px solid var(--color-blue-dark);
-}
-
-
-#container{
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
 
 .card {
     display: flex;
@@ -80,28 +80,27 @@ nav a:hover {
 
 
 .card img {
-    width: 100%
-    align-self: center;
+    width: 100% align-self: center;
     order: -1;
     z-index: 1;
 }
 
-.soldOut{
+.soldOut {
     width: 10rem;
     display: none;
     margin: 1rem;
     display: center;
 }
 
-.vegetarian{
+.vegetarian {
     display: none;
 }
 
-.allergens{
+.allergens {
     display: none;
 }
 
-.alcohol{
+.alcohol {
     display: none;
 }
 
@@ -112,52 +111,60 @@ nav a:hover {
 }
 
 button {
-     padding: 15px 25px;
-  font-size: 24px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: darkred;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: crimson;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
     width: 90%;
     margin: .5rem;
     margin-top: auto;
 }
 
-.button:hover {background-color: darkred;
+button:hover {
+    background-color: darkred;
 }
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+button:active {
+    background-color: darkred;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
-.price fullPrice{
+.price fullPrice {
     justify-content: flex-start;
+}
+
+.price priceDiscount span {
+    justify-content: flex-start;
+    font-size: 10rem;
+    color: crimson;
 }
 
 /*modal stuff*/
 .hide {
-  display: none;
-}
-.modal-background {
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-.modal-content {
-  background-color: #fefefe;
-  border: 1px solid #7c1f17;
-  margin: 1em;
-  padding: 2em;
+    display: none;
 }
 
+.modal-background {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border: 1px solid #7c1f17;
+    margin: 1em;
+    padding: 2em;
+}
