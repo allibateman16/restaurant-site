@@ -1,3 +1,4 @@
+
 Html {
 	scroll-behavior: smooth;
 }
@@ -44,10 +45,26 @@ h3 {
 
 }
 
+nav a {
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  background: var(--color-blue-light);
+  color: var(--color-grey-lightest);
+  border-bottom: 1px solid var(--color-grey-lightest);
+  transition: all 0.1s;
+}
 
-.insideContainer{
+nav a:hover {
+  background: var(--color-grey-lightest);
+  color: var(--color-blue-base);
+  border-bottom: 1px solid var(--color-blue-dark);
+}
+
+
+#container{
    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .card {
@@ -55,8 +72,10 @@ h3 {
     flex-flow: column;
     margin: 1rem;
     padding: 1rem;
-    border: hidden;
+    border: solid 1px #505050;
     box-shadow: 5px 7px 2px #505050;
+    border-radius: 25px;
+
 }
 
 
@@ -68,7 +87,10 @@ h3 {
 }
 
 .soldOut{
-display: none;
+    width: 10rem;
+    display: none;
+    margin: 1rem;
+    display: center;
 }
 
 .vegetarian{
@@ -83,19 +105,35 @@ display: none;
     display: none;
 }
 
+
+/*button stuff*/
 .card button {
     align-self: center;
 }
 
 button {
-    background-color: teal;
-    box-shadow: 10px;
-    border-radius: 50px;
-    color: white;
+     padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: darkred;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
     width: 90%;
     margin: .5rem;
-    border-radius: 1.2rem;
     margin-top: auto;
+}
+
+.button:hover {background-color: darkred;
+}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 
