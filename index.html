@@ -12,30 +12,40 @@
 <body>
 
     <header>
-    <nav></nav>
+        <nav></nav>
     </header>
 
     <div class="container">
 
         <main>
-          </main>
-        <template id="dishTemplate">
-            <div class="insideContainer">
-                <article class="card">
-                   <h2>name of dish</h2>
-                    <img src="">
-                    <p class="price fullPrice"> <span>price</span>,-</p>
-                    <p class="price priceDiscount"><span>price</span>,-</p>
-                    <p class="allGone">sold out?</p>
-                     <p class="vegetarian">vegitarian?</p>
-                    <p class="allergens">allergies?</p>
-                    <p class="alcohol">alcohol?</p>
-                    <p class="short">short description</p>
 
-                    <button>Read more</button>
-                </article>
+            <template id="dishTemplate">
+                <section class="insideContainer">
+                    <article class="card">
+                        <h2>name of dish</h2>
+                        <img src="">
+                        <img class="soldOut" src="soldOut.png" alt="We are all out of this dish">
+                        <p class="price fullPrice"> <span>price</span>,-</p>
+                        <p class="price priceDiscount"><span>price</span>,-</p>
+                        <p class="short">short description</p>
+
+                        <button>Read more</button>
+                    </article>
+                </section>
+            </template>
+
+            <div class="modal-background hide">
+                <div class="modal-content">
+                    <h3 class="modal-name">NAME</h3>
+                    <img src="" alt="" class="modal-image" />
+                    <p class="modal-description">LONG DESCRIPTION</p>
+                    <p class="modal-price"> <span>price</span>,-</p>
+                     <p class="vegetarian">vegitarian?</p>
+                        <p class="allergens">allergies?</p>
+                        <p class="alcohol">alcohol?</p>
+                </div>
             </div>
-        </template>
+        </main>
     </div>
 
 
