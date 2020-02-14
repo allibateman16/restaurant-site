@@ -102,23 +102,26 @@ h3 {
 }
 
 .soldOut {
-    width: 10rem;
+    width: 5rem;
     display: none;
     margin: 1rem;
     display: center;
 }
 
 .vegetarian {
+    width: 10rem;
     display: none;
+    margin: 1rem;
+    display: center;
 }
 
 .allergens {
     display: none;
 }
 
-.alcohol {
+/*.alcohol {
     display: none;
-}
+}*/
 
 
 /*button stuff*/
