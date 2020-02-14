@@ -2,10 +2,10 @@ Html {
     scroll-behavior: smooth;
 }
 
-#container {
+section {
     display: grid;
     grid-gap: 2rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 }
 
 body {
@@ -15,19 +15,30 @@ body {
 
 }
 
-header {
-    display: grid;
-    grid-auto-flow: column;
+header nav {
     margin: 2rem;
-    background-color: crimson;
-    color: white;
-    order: -1;
+    grid-column: -1/1;
+    color: slategrey;
     font-size: 40px;
     font-weight: bold;
-    border: solid 2px;
-    border-color: crimson;
-    justify-content: center;
+    text-align: center;
+    border-bottom: 1px slategrey;
+    border-top: 1px slategrey;
+    border: solid;
+    border-left: none;
+    border-right: none;
 
+}
+
+header img{
+    height: 5rem;
+    width: auto;
+}
+
+header p{
+   grid-column: -1/1;
+   justify-content: center;
+    text-align: center;
 }
 
 nav a {
@@ -45,14 +56,19 @@ nav a:hover {
     border-bottom: 1px solid var(--color-blue-dark);
 }
 
-h1 {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    order: 3;
-    color: red;
+section h1 {
+    grid-column: -1/1;
+    color: slategrey;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 0em;
+    margin-top: 3em;
+    border-bottom: 1px slategrey;
+    border-top: 1px slategrey;
+    border: solid;
+    border-left: none;
+    border-right: none;
 }
 
 
@@ -79,10 +95,10 @@ h3 {
 }
 
 
-.card img {
-    width: 100% align-self: center;
+.ogImage {
+    width: 100% ;
+    align-self: center;
     order: -1;
-    z-index: 1;
 }
 
 .soldOut {
@@ -117,7 +133,7 @@ button {
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: crimson;
+    background-color: darkseagreen;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
@@ -127,25 +143,30 @@ button {
 }
 
 button:hover {
-    background-color: darkred;
+    background-color: darkolivegreen;
 }
 
 button:active {
-    background-color: darkred;
+    background-color: darkolivegreen;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
 
 
-.price fullPrice {
+.price.fullPrice{
     justify-content: flex-start;
+    text-decoration: line-through;
 }
 
-.price priceDiscount span {
-    justify-content: flex-start;
+
+.price.priceDiscount{
+ justify-content: flex-start;
     font-size: 10rem;
     color: crimson;
+    font-size: 1rem;
 }
+
+
 
 /*modal stuff*/
 .hide {
@@ -167,4 +188,24 @@ button:active {
     border: 1px solid #7c1f17;
     margin: 1em;
     padding: 2em;
+}
+
+.modal-image {
+    width: 25rem;
+    height: auto;
+    align-self:center;
+}
+
+footer{
+    margin: 2rem;
+    grid-column: -1/1;
+    color: slategrey;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px slategrey;
+    border-top: 1px slategrey;
+    border: solid;
+    border-left: none;
+    border-right: none;
 }
